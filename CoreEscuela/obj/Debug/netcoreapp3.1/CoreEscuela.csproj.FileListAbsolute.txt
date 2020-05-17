@@ -1,0 +1,11 @@
+E:\platzi\net Core\CoreEscuela\bin\Debug\netcoreapp3.1\CoreEscuela.exe
+E:\platzi\net Core\CoreEscuela\bin\Debug\netcoreapp3.1\CoreEscuela.deps.json
+E:\platzi\net Core\CoreEscuela\bin\Debug\netcoreapp3.1\CoreEscuela.runtimeconfig.json
+E:\platzi\net Core\CoreEscuela\bin\Debug\netcoreapp3.1\CoreEscuela.runtimeconfig.dev.json
+E:\platzi\net Core\CoreEscuela\bin\Debug\netcoreapp3.1\CoreEscuela.dll
+E:\platzi\net Core\CoreEscuela\bin\Debug\netcoreapp3.1\CoreEscuela.pdb
+E:\platzi\net Core\CoreEscuela\obj\Debug\netcoreapp3.1\CoreEscuela.csprojAssemblyReference.cache
+E:\platzi\net Core\CoreEscuela\obj\Debug\netcoreapp3.1\CoreEscuela.AssemblyInfoInputs.cache
+E:\platzi\net Core\CoreEscuela\obj\Debug\netcoreapp3.1\CoreEscuela.AssemblyInfo.cs
+E:\platzi\net Core\CoreEscuela\obj\Debug\netcoreapp3.1\CoreEscuela.dll
+E:\platzi\net Core\CoreEscuela\obj\Debug\netcoreapp3.1\CoreEscuela.pdb
