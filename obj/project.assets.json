@@ -8235,11 +8235,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Platzi\\net Core\\asp\\asp.csproj",
+      "projectUniqueName": "E:\\Platzi\\net Core\\azure\\sitioweb\\asp.csproj",
       "projectName": "asp",
-      "projectPath": "E:\\Platzi\\net Core\\asp\\asp.csproj",
+      "projectPath": "E:\\Platzi\\net Core\\azure\\sitioweb\\asp.csproj",
       "packagesPath": "C:\\Users\\ARTURO\\.nuget\\packages\\",
-      "outputPath": "E:\\Platzi\\net Core\\asp\\obj\\",
+      "outputPath": "E:\\Platzi\\net Core\\azure\\sitioweb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

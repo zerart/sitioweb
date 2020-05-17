@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dJGDtARDYwU95o7kjxj5g4S8jKIXMciXtVnGpqQaG8C+TkOXRuWErv4DQLrJmmk7LIqpW1iUUmu6zQIopxW8zQ==",
+  "dgSpecHash": "FhfrtuZQK2mX5Q+xmmjVvFpu86U2rSwudj0eAmLrcIjJCMKtfzyOZ42duy6sS3ZatyGqFeXQ6PBKADlKbJA1iA==",
   "success": true,
-  "projectFilePath": "E:\\Platzi\\net Core\\asp\\asp.csproj",
+  "projectFilePath": "E:\\Platzi\\net Core\\azure\\sitioweb\\asp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ARTURO\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\ARTURO\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
