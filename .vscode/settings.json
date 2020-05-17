@@ -1,0 +1,5 @@
+{
+    "appService.preDeployTask": "publish-release",
+    "appService.deploySubpath": "",
+    "appService.defaultWebAppToDeploy": "/subscriptions/bb65ed42-2902-442c-85dd-5ae7e6b9eb44/resourceGroups/platzi/providers/Microsoft.Web/sites/arturopruebas2"
+}

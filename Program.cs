@@ -1,96 +1,44 @@
-﻿using System;
-using CoreEscuela.Entidades;
+using System;
 using System.Collections.Generic;
-using CoreEscuela.Util;
 using System.Linq;
-using CoreEscuela.App;
-using static System.Console;
+using System.Threading.Tasks;
+using asp.Models;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
-namespace CoreEscuela
+namespace asp
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            AppDomain.CurrentDomain.ProcessExit += AccionDelEvento;
-
-            EscuelaEngine engine = new EscuelaEngine();
-            engine.Inicializar();
-            //imprimirCursos(engine.escuela);
-            Printer.WriteTitle("BIENVENIDOS A LAESCUELA");
-            var reporteador = new Reporteador(engine.GetDiccionarioObjetos());
-            var evalList = reporteador.GetListaEvaluaciones();
-            var listaAsg = reporteador.GetListaAsignaturas();
-            var listaEvalAsig = reporteador.GetListaEvaPorAsi();
-            var promxAsig = reporteador.GetListaPromedioAlumAsig();
-
-            Printer.WriteTitle("CAPTURA DE UNA EVALUACIÓN POR CONSOLA");
-            var newEval = new Evaluacion();
-            string nombre, notaString;
-            float nota;
-            WriteLine("Ingrese el Nombre de la Evaluación");
-            Printer.PresioneEnter();
-            nombre = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(nombre))
+            //CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+            using(var scope = host.Services.CreateScope())
             {
-                throw new ArgumentException("El valor del nombre no puede ser vacio");
-            }
-            else
-            {
-                newEval.Nombre = nombre.ToLower();
-                WriteLine("El nombre fue ingresado correctamente");
-            }
-            WriteLine("Ingrese la nota de la Evaluación");
-            Printer.PresioneEnter();
-            notaString = Console.ReadLine();
-            if (string.IsNullOrWhiteSpace(notaString))
-            {
-                throw new ArgumentException("El valor del nota no puede ser vacio");
-            }
-            else
-            {
+                var services = scope.ServiceProvider;
                 try
                 {
-                    newEval.Nota = float.Parse(notaString);
-                    if (newEval.Nota > 5 || newEval.Nota < 0)
-                    {
-                        throw new ArgumentOutOfRangeException("La nota  debe estar entre 0 y 5");
-                    }
-
-                    WriteLine("La nota de la Evaluacion fue ingresado correctamente");
+                    var context = services.GetRequiredService<EscuelaContext>();
+                    context.Database.EnsureCreated();
                 }
-                catch (ArgumentOutOfRangeException arge)
+                catch (System.Exception ex)
                 {
-
-                    WriteLine(arge.Message);
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An error occurred creating the DB.");
                 }
-                catch (Exception)
-                {
-
-                    WriteLine("La nota NO ES CORRECTA");
-                }
-                finally
-                {
-
-                }
-
             }
-
+            host.Run();
         }
 
-        private static void AccionDelEvento(object sender, EventArgs e)
-        {
-            Printer.WriteTitle("Me salí");
-        }
-
-        private static void imprimirCursos(Escuela escuela)
-        {
-            Printer.WriteTitle("BIENVENIDOS A LA ESCUELA");
-
-            foreach (var curso in escuela.Cursos)
-            {
-                System.Console.WriteLine($"Nombre {curso.Nombre}, Id {curso.UniqueId}");
-            }
-        }
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
     }
 }

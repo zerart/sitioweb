@@ -1,0 +1,14 @@
+@model IEnumerable<Alumno>
+@{
+    ViewData["Title"] = "Inforamación Alumno";
+    Layout = "_Simple";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<strong>Desde la vista parcial</strong>
+
+
+<partial name="_ListaObjetoEscuela" ></partial>
+
+<p><i>@ViewBag.Fecha</i></p>
