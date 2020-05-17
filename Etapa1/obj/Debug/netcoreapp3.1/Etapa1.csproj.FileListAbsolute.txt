@@ -1,0 +1,11 @@
+E:\platzi\net Core\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.exe
+E:\platzi\net Core\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.deps.json
+E:\platzi\net Core\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.runtimeconfig.json
+E:\platzi\net Core\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.runtimeconfig.dev.json
+E:\platzi\net Core\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.dll
+E:\platzi\net Core\Etapa1\bin\Debug\netcoreapp3.1\Etapa1.pdb
+E:\platzi\net Core\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.csprojAssemblyReference.cache
+E:\platzi\net Core\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.AssemblyInfoInputs.cache
+E:\platzi\net Core\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.AssemblyInfo.cs
+E:\platzi\net Core\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.dll
+E:\platzi\net Core\Etapa1\obj\Debug\netcoreapp3.1\Etapa1.pdb
